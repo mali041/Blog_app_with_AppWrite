@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import { login as authLogin } from "../../store/features/authSlice";
-import { Button, Input, Logo } from "./index";
+import { Button, Input, Logo } from "..";
 import authService from "../../appwrite/auth";
 
 function Login() {

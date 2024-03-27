@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 
 import authService from "../../appwrite/auth";
 import { login } from "../../store/features/authSlice";
-import { Button, Input, Logo } from "./index";
+import { Button, Input, Logo } from "..";
 
 function Signup() {
   const navigate = useNavigate();

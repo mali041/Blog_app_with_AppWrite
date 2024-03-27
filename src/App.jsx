@@ -1,9 +1,12 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { Outlet } from "react-router-dom";
+
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/features/authSlice";
 import { Footer, Header } from "./components";
+
 import conf from "./conf";
 
 function App() {
@@ -23,11 +26,13 @@ function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  console.log(conf.appwriteBucketId);
   return !loading ? (
-    <div className="min-h-screen flex flex-wrap content-between bg-slate-500">
+    <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
       <div className="w-full block">
         <Header />
+        <main>
+          Welcome: <Outlet />
+        </main>
         <Footer />
       </div>
     </div>
